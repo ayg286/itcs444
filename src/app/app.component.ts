@@ -17,19 +17,7 @@ export class AppComponent {
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
     private afAuth: AngularFireAuth
-  ) {
-    const authObserver = afAuth.authState.subscribe( 
-      user => {
-       if (user) {
-        this.rootPage = HomePage;
-        authObserver.unsubscribe();
-       } else {
-        this.rootPage = 'LoginPage';
-        authObserver.unsubscribe();
-       }
-      });
-      
-  }
+  ) {}
 
   initializeApp() {
     this.platform.ready().then(() => {

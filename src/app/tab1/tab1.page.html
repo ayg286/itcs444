@@ -1,12 +1,47 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>Home</ion-title>
-    <ion-button slot="end" fill="clear" routerLink='/home'>
+    <ion-button slot="end" fill="clear" (click)="logout()" routerLink='/home'>
       Log out
     </ion-button>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <br><br><br>
+  <ion-grid >
+    <ion-row>
+      <ion-col >
+        <div>
+        <a href="/details">
+          <img src="https://streamingwars.com/wp-content/uploads/2020/02/amazon.jpg"  width="150" height="100">
+        </a></div>
+      </ion-col>
+      
+      <ion-col>
+        <div>
+        <a href="/details">
+          <img src="https://www.macobserver.com/wp-content/uploads/2020/04/workheader-eBay-logo.jpg"  width="150" height="100">
+        </a></div>
+      </ion-col>
+    </ion-row>
 
+    <ion-row>
+      <ion-col>
+        <div>
+        <a href="/details">
+          <img src="https://images-eu.ssl-images-amazon.com/images/I/41-1uF7Pn8L.png" width="150" height="100">
+        </a></div>
+      </ion-col>
+      
+      <ion-col>
+        <div>
+        <a href="/details">
+          <img src="https://www.bestdesigns.co/uploads/inspiration_images/4350/990__1511457498_404_walmart.png"  width="150" height="100">
+        </a></div>
+      </ion-col>
+    </ion-row> 
+  </ion-grid>
+  <br><br>
+  <ion-button color = "success" expand="full" routerLink='/search'>Search</ion-button>
 </ion-content>

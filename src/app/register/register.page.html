@@ -8,18 +8,15 @@
 </ion-header>
 
 <ion-content>
-<ion-item>
-  <ion-label>Username</ion-label>
-  <ion-input type="text" placeholder="Enter username" [(ngModel)]="item.username"></ion-input>
-</ion-item>
+  <ion-item>
+    <ion-label>Email</ion-label>
+    <ion-input type="email" placeholder="Enter email" [(ngModel)]="user.email"></ion-input>
+  </ion-item>
 <ion-item>
   <ion-label>Password</ion-label>
-  <ion-input type="password" placeholder="Enter password" [(ngModel)]="item.password"></ion-input>
-</ion-item>
-<ion-item>
-  <ion-label>Email</ion-label>
-  <ion-input type="email" placeholder="Enter email" [(ngModel)]="item.email"></ion-input>
+  <ion-input type="password" placeholder="Enter password" [(ngModel)]="user.password"></ion-input>
 </ion-item>
 
-<ion-button color = "success" expand="full" routerLink='/home' (click)="register()" [disabled]="!username || !pass || !email">Register</ion-button>
+
+<ion-button color = "success" expand="full" routerLink='/home' (click)="register()" [disabled]="!user.email || !user.password">Register</ion-button>
 </ion-content>

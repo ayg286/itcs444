@@ -15,15 +15,6 @@ export interface Users{
   providedIn: 'root'
 })
 export class DatasrvService {
-  usersCollectionRef: AngularFirestoreCollection<Users>;
-  user: Observable<Users[]>;
 
-  constructor(public AFS: AngularFirestore) { 
-    this.usersCollectionRef = this.AFS.collection('Users');
-  }
-
-  registerfb(item){
-    this.usersCollectionRef.add(item);
-    
-  }
+  constructor(public AFS: AngularFirestore) {}
 }
