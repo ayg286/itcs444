@@ -16,16 +16,18 @@ import { AngularFireAuth } from '@angular/fire/auth';
 })
 export class HomePage {
 
-  constructor(public alertctrl: AlertController, public srv: DatasrvService, public router:Router, public activatedroute: ActivatedRoute) {}
+  public user = { username:"", password:""};
 
-  async login(){
+  constructor(public afAuth: AngularFireAuth,public alertctrl: AlertController, public srv: DatasrvService, public router:Router, public activatedroute: ActivatedRoute) {}
 
-    let alert=await this.alertctrl.create({
-      header: "Success!" ,
-      message: "Logged in successfully.",
-      buttons: ["OK"],
-    });
-    alert.present();
+  login(){
+    this.afAuth.auth.signInWithEmailAndPassword(this.user.username, this.user.password)
+    .then((response)=>{
+      alert("logged in succesfuly");
+    })
+    .catch((err)=>{
+      alert("username or password incorrect");
+    })
+
   }
-
 }
